@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Secure Chat</title>
+	<style>
+		.center {
+			text-align: center;
+		}
+
+		#login-section {
+			text-align: center;
+			color: #270751
+		}
+
+		#chat {
+			border-style: solid;
+			border-color: #92a8d1;
+			padding: 20px;
+			margin: 20px;
+		}
+
+		#msgInput {
+			width: 90%;
+		}
+
+		.user-online {
+			background-color: aquamarine;
+		}
+
+		.user-offline {
+			background-color: gray;
+		}
+
+		.user {
+			padding: 5px;
+			margin: 5px;
+		}
+
+		button.active {
+			border-color: lightskyblue;
+			border-radius: 50%;
+			border-width: 5px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="login-section">
+		<p>
+			<b>Welcome to Secure Chat
+				<b/>
+		</p>
+		<input type="text" id="my-name" placeholder="username" />
+		<input type="password" id="my-pass" placeholder="password" />
+		<button onclick="login()">Login</button>
+	</div>
+
+
+	<div id="main-section" style="display: none;">
+		<div class="users center" id="show-users">
+		</div>
+
+		<div id="chat">
+		</div>
+
+		<div class="center">
+			<input id="msgInput" value="" placeholder="enter message..." />
+		</div>
+	</div>
+
+
+	<!--===============================================================================================-->
+	<script src="js/jquery-3.3.1.slim.js"></script>
+	<script src="js/crypto-js/crypto-js.js"></script>
+	<script src="js/jsencrypt.min.js"></script>
+	<script src="js/socket.io.js"></script>
+	
+	<script src="js/my-crypto.js"></script>
+	<script src="js/client.js"></script>
+	<!--===============================================================================================-->
+</body>
+
+</html>
